@@ -9,13 +9,8 @@ const start = async () => {
     
         await connectDatabase(process.env.MONGODB_URL);
         await Product.create(ProductJson);
+        // await Product.deleteMany();
         console.log("Products added to database");
-        // const newProduct = await Product.create({
-        //     name: "Samsung Galaxy S21",
-        //     price: 1000,
-        //     company: "samsung"
-        // });
-        // console.log(newProduct);
     }catch(error){
         console.log(error);
     }
