@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-uri = "mongodb+srv://root:root@nodeapi.zjhqppe.mongodb.net/NodeApi?retryWrites=true&w=majority"
 
-const connectDatabase = () => {
+
+const connectDatabase = (uri) => {
     console.log("Connecting to database...");
     return mongoose.connect(uri , {
         useNewUrlParser: true,
